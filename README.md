@@ -1,43 +1,125 @@
-# Getting Started with Create React App
+Lith&Talk – Full Stack Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Lith&Talk is a full-stack web application designed to help users learn Lithuanian through structured vocabulary, categories, and interactive learning features.
 
-## Available Scripts
+The system consists of a React frontend and a Spring Boot backend, working together to provide a secure and user-friendly language learning experience.
 
-In the project directory, you can run:
+Architecture Overview
+Frontend (React) ⇄ Backend (Spring Boot API) ⇄ MySQL Database
+Frontend handles UI/UX and user interaction
+Backend manages logic, authentication, and data
+Database stores users, words, categories, and reviews
+Tech Stack
+  Frontend
+React
+JavaScript (ES6+)
+CSS / Tailwind (if used)
+Axios (API requests)
+  Backend
+Java 17
+Spring Boot
+Spring Security
+JWT Authentication
+Hibernate / JPA
+MySQL
+Maven
+ Features
+ User Features
+Registration & login
+Secure authentication (JWT + HttpOnly cookies)
+Browse Lithuanian vocabulary
+Filter words by categories
+Submit reviews / feedback
+ Security
+Password hashing (Argon2)
+JWT-based authentication
+Protected API endpoints
+ Learning System
+Words with translations
+Category-based grouping
+Expandable for quizzes / gamification
 
-### `npm start`
+ Setup Instructions
+1. Clone Repository
+git clone https://github.com/kateryna051/diploma.git
+cd backend
+cd project-backend
+ Run Backend
+Configure database
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Edit:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+backend/src/main/resources/application.properties
+spring.datasource.url=jdbc:mysql://localhost:3306/lithtalk
+spring.datasource.username=root
+spring.datasource.password=yourpassword
 
-### `npm test`
+spring.jpa.hibernate.ddl-auto=update
+Start backend
+cd lith_talk
+mvn spring-boot:run
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Backend runs on:
 
-### `npm run build`
+http://localhost:8080
+ Run Frontend
+cd frontend
+npm install
+npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Frontend runs on:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+http://localhost:3000
+ Authentication Flow
+User logs in / registers
+Backend validates credentials
+JWT token is generated
+Token stored in HttpOnly cookies
+Frontend sends authenticated requests
+📡 API Overview
+Auth
+POST /api/auth/register
+POST /api/auth/login
+POST /api/auth/logout
+Words
+GET /api/words
+GET /api/words/{id}
+POST /api/words
+Categories
+GET /api/categories
+POST /api/categories
+Reviews
+GET /api/reviews
+POST /api/reviews
+🗄️ Database Entities
+User
+Word
+Category
+Review
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Relationships:
 
-### `npm run eject`
+Category → multiple words
+User → multiple reviews
+Architecture Pattern
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Layered backend:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Controller → Service → Repository → Database
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Frontend:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Components → Pages → API Services
+Future Improvements
+ Gamification (XP, levels, streaks)
+ User progress tracking
+ Swagger API documentation
+ 
+This project was developed as a Bachelor’s thesis, focusing on building a modern and accessible Lithuanian language learning platform.
+
+ Author
+
+Kateryna Patsui
 
 ## Learn More
 
