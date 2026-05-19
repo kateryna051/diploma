@@ -9,13 +9,13 @@ Frontend (React) ⇄ Backend (Spring Boot API) ⇄ MySQL Database
 Frontend handles UI/UX and user interaction
 Backend manages logic, authentication, and data
 Database stores users, words, categories, and reviews
-Tech Stack
-  Frontend
+Tech Stack 
+Frontend: 
 React
 JavaScript (ES6+)
 CSS / Tailwind (if used)
 Axios (API requests)
-  Backend
+Backend: 
 Java 17
 Spring Boot
 Spring Security
@@ -48,7 +48,6 @@ cd project-backend
 Configure database
 
 Edit:
-
 backend/src/main/resources/application.properties
 spring.datasource.url=jdbc:mysql://localhost:3306/lithtalk
 spring.datasource.username=root
@@ -68,15 +67,16 @@ npm install
 npm start
 
 Frontend runs on:
-
 http://localhost:3000
- Authentication Flow
+
+Authentication Flow
 User logs in / registers
 Backend validates credentials
 JWT token is generated
 Token stored in HttpOnly cookies
 Frontend sends authenticated requests
-📡 API Overview
+
+API Overview:
 Auth
 POST /api/auth/register
 POST /api/auth/login
@@ -111,13 +111,14 @@ Frontend:
 
 Components → Pages → API Services
 Future Improvements
- Gamification (XP, levels, streaks)
- User progress tracking
- Swagger API documentation
+Gamification (XP, levels, streaks)
+User progress tracking
+Swagger API documentation
  
 This project was developed as a Bachelor’s thesis, focusing on building a modern and accessible Lithuanian language learning platform.
 
- Author
+
+Author:
 
 Kateryna Patsui
 
