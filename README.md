@@ -4,25 +4,25 @@ Lith&Talk is a full-stack web application designed to help users learn Lithuania
 
 The system consists of a React frontend and a Spring Boot backend, working together to provide a secure and user-friendly language learning experience.
 
-##Architecture Overview
-#Frontend (React) ⇄ Backend (Spring Boot API) ⇄ MySQL Database
-#Frontend handles UI/UX and user interaction
-#Backend manages logic, authentication, and data
-#Database stores users, words, categories, and reviews
-#Tech Stack 
-##Frontend: 
-#React
-#JavaScript (ES6+)
-#CSS / Tailwind (if used)
-#Axios (API requests)
-##Backend: 
-#Java 17
-#Spring Boot
-#Spring Security
-#JWT Authentication
-#Hibernate / JPA
-#MySQL
-#Maven
+## Architecture Overview
+# Frontend (React) ⇄ Backend (Spring Boot API) ⇄ MySQL Database
+# Frontend handles UI/UX and user interaction
+# Backend manages logic, authentication, and data
+# Database stores users, words, categories, and reviews
+# Tech Stack 
+## Frontend: 
+# React
+# JavaScript (ES6+)
+# CSS / Tailwind (if used)
+# Axios (API requests)
+## Backend: 
+# Java 17
+# Spring Boot
+# Spring Security
+# JWT Authentication
+# Hibernate / JPA
+# MySQL
+# Maven
  Features
  User Features
 Registration & login
