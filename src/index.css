@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Universal Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom right, #ccfbf1, #bae6fd, #e0f2fe);
+  overflow-x: hidden;  /* no horizontal scroll */
+  overflow-y: auto;    /* allow vertical scroll */
+}
+
+
+/* Floating animation for logo */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ===== Input Fields ===== */
+.input {
+  @apply w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-700 
+  focus:outline-none focus:ring-2 focus:ring-sky-400 transition-all;
+}
+
+/* ===== Form Container ===== */
+form {
+  @apply w-full;
+}
+
+/* ===== Button Styles ===== */
+button {
+  @apply transition duration-300 ease-in-out;
+}
+
+/* ===== Background Gradients ===== */
+.bg-gradient-auth {
+  background: linear-gradient(135deg, #67e8f9, #38bdf8, #14b8a6);
+}
+
+/* ===== Link Styling ===== */
+a {
+  @apply text-sky-600 hover:underline;
+}
