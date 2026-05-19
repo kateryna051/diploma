@@ -1,79 +1,97 @@
-Lith&Talk – Full Stack Application
+# Lith&Talk – Full Stack Application
 
 Lith&Talk is a full-stack web application designed to help users learn Lithuanian through structured vocabulary, categories, and interactive learning features.
 
 The system consists of a React frontend and a Spring Boot backend, working together to provide a secure and user-friendly language learning experience.
 
-Architecture Overview
+---
+
+## Architecture Overview
+
 Frontend (React) ⇄ Backend (Spring Boot API) ⇄ MySQL Database
-Frontend
-Handles UI/UX and user interaction
-Backend
-Manages business logic, authentication, and data processing
-Database
-Stores users, words, categories, and reviews
-Tech Stack
-Frontend
-React
-JavaScript (ES6+)
-CSS / Tailwind
-Axios (API requests)
-Backend
-Java 17
-Spring Boot
-Spring Security
-JWT Authentication
-Hibernate / JPA
-MySQL
-Maven
-Features
-User Features
-User registration and login
-Secure authentication (JWT with HttpOnly cookies)
-Browse Lithuanian vocabulary
-Filter words by categories
-Submit reviews and feedback
-Security
-Password hashing (Argon2)
-JWT-based authentication
-Protected API endpoints
-Learning System
-Words with translations
-Category-based grouping
-Expandable for quizzes and gamification
-Setup Instructions
-1. Clone Repository
+
+- Frontend handles UI/UX and user interaction  
+- Backend manages business logic, authentication, and data processing  
+- Database stores users, words, categories, and reviews  
+
+---
+
+## Tech Stack
+
+### Frontend
+- React  
+- JavaScript (ES6+)  
+- CSS / Tailwind  
+- Axios (API requests)  
+
+### Backend
+- Java 17  
+- Spring Boot  
+- Spring Security  
+- JWT Authentication  
+- Hibernate / JPA  
+- MySQL  
+- Maven  
+
+---
+
+## Features
+
+### User Features
+- User registration and login  
+- Secure authentication (JWT with HttpOnly cookies)  
+- Browse Lithuanian vocabulary  
+- Filter words by categories  
+- Submit reviews and feedback  
+
+### Security
+- Password hashing (Argon2)  
+- JWT-based authentication  
+- Protected API endpoints  
+
+### Learning System
+- Words with translations  
+- Category-based grouping  
+- Expandable for quizzes and gamification  
+
+---
+
+## Setup Instructions
+
+### 1. Clone Repository
+
+bash
 git clone https://github.com/kateryna051/diploma.git
-cd backend/project-backend
-Run Backend
-Configure Database
 
-Edit:
+## Run Backend
+- Configure Database
 
-backend/src/main/resources/application.properties
+# Edit:
 
-Add:
+- backend/src/main/resources/application.properties
 
-spring.datasource.url=jdbc:mysql://localhost:3306/lithtalk
-spring.datasource.username=root
-spring.datasource.password=yourpassword
+# Add:
 
-spring.jpa.hibernate.ddl-auto=update
-Start Backend
-cd lith_talk
-mvn spring-boot:run
+- pring.datasource.url=jdbc:mysql://localhost:3306/lithtalk
+- spring.datasource.username=root
+- spring.datasource.password=yourpassword
 
-Backend runs on:
+- spring.jpa.hibernate.ddl-auto=update
+- Start Backend
+- cd backend/project-backend
+- mvn spring-boot:run
 
+# Backend runs on:
 http://localhost:8080
+
 Run Frontend
 cd frontend
 npm install
 npm start
 
 Frontend runs on:
-
 http://localhost:3000
+
 Authentication Flow
 User registers or logs in
 Backend validates credentials
@@ -105,9 +123,13 @@ Category → multiple words
 User → multiple reviews
 Architecture Pattern
 Backend
+
 Controller → Service → Repository → Database
+
 Frontend
+
 Components → Pages → API Services
+
 Future Improvements
 Gamification (XP, levels, streaks)
 User progress tracking
