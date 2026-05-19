@@ -4,79 +4,83 @@ Lith&Talk is a full-stack web application designed to help users learn Lithuania
 
 The system consists of a React frontend and a Spring Boot backend, working together to provide a secure and user-friendly language learning experience.
 
-# Architecture Overview
+Architecture Overview
 Frontend (React) ⇄ Backend (Spring Boot API) ⇄ MySQL Database
- Frontend handles UI/UX and user interaction
- Backend manages logic, authentication, and data
- Database stores users, words, categories, and reviews
- Tech Stack 
-# Frontend: 
+Frontend
+Handles UI/UX and user interaction
+Backend
+Manages business logic, authentication, and data processing
+Database
+Stores users, words, categories, and reviews
+Tech Stack
+Frontend
 React
 JavaScript (ES6+)
- CSS / Tailwind (if used)
- Axios (API requests)
-# Backend: 
- Java 17
- Spring Boot
- Spring Security
- JWT Authentication
- Hibernate / JPA
- MySQL
- Maven
- Features
- User Features
-Registration & login
-Secure authentication (JWT + HttpOnly cookies)
+CSS / Tailwind
+Axios (API requests)
+Backend
+Java 17
+Spring Boot
+Spring Security
+JWT Authentication
+Hibernate / JPA
+MySQL
+Maven
+Features
+User Features
+User registration and login
+Secure authentication (JWT with HttpOnly cookies)
 Browse Lithuanian vocabulary
 Filter words by categories
-Submit reviews / feedback
- Security
+Submit reviews and feedback
+Security
 Password hashing (Argon2)
 JWT-based authentication
 Protected API endpoints
- Learning System
+Learning System
 Words with translations
 Category-based grouping
-Expandable for quizzes / gamification
-
- Setup Instructions
+Expandable for quizzes and gamification
+Setup Instructions
 1. Clone Repository
 git clone https://github.com/kateryna051/diploma.git
-cd backend
-cd project-backend
- Run Backend
-Configure database
+cd backend/project-backend
+Run Backend
+Configure Database
 
 Edit:
+
 backend/src/main/resources/application.properties
+
+Add:
+
 spring.datasource.url=jdbc:mysql://localhost:3306/lithtalk
 spring.datasource.username=root
 spring.datasource.password=yourpassword
 
 spring.jpa.hibernate.ddl-auto=update
-Start backend
+Start Backend
 cd lith_talk
 mvn spring-boot:run
 
 Backend runs on:
 
 http://localhost:8080
- Run Frontend
+Run Frontend
 cd frontend
 npm install
 npm start
 
 Frontend runs on:
-http://localhost:3000
 
+http://localhost:3000
 Authentication Flow
-User logs in / registers
+User registers or logs in
 Backend validates credentials
 JWT token is generated
-Token stored in HttpOnly cookies
+Token is stored in HttpOnly cookies
 Frontend sends authenticated requests
-
-API Overview:
+API Overview
 Auth
 POST /api/auth/register
 POST /api/auth/login
@@ -91,39 +95,27 @@ POST /api/categories
 Reviews
 GET /api/reviews
 POST /api/reviews
-🗄️ Database Entities
+Database Entities
 User
 Word
 Category
 Review
-
-Relationships:
-
+Relationships
 Category → multiple words
 User → multiple reviews
 Architecture Pattern
-
-Layered backend:
-
+Backend
 Controller → Service → Repository → Database
-
-Frontend:
-
+Frontend
 Components → Pages → API Services
 Future Improvements
 Gamification (XP, levels, streaks)
 User progress tracking
 Swagger API documentation
- 
+About
+
 This project was developed as a Bachelor’s thesis, focusing on building a modern and accessible Lithuanian language learning platform.
 
-
-Author:
+Author
 
 Kateryna Patsui
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
